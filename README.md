@@ -14,6 +14,7 @@ The core features implemented include:
 
 The project is structured according to Clean Architecture principles, organized into the following directory layout:
 
+```
 lib/
   core/
     utils/
@@ -34,6 +35,8 @@ lib/
         widgets/
   injection_container.dart
   main.dart
+```
+
 
 To run this project locally, you will need to have the Flutter SDK installed and set up on your machine, along with an Android emulator or a connected Android device. You can also run it on iOS devices if you have a Mac environment configured. This project was primarily tested on Android.
 
