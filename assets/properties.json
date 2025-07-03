@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "title": "Cozy Apartment in Lagos",
+    "description": "A lovely 2-bedroom apartment with sea views.",
+    "imageUrl": "https://via.placeholder.com/600x400",
+    "pricePerNight": 120.0,
+    "location": "Lagos, Nigeria",
+    "rating": 4.5,
+    "availableDates": ["2025-07-20", "2025-07-21", "2025-07-22"]
+  },
+  {
+    "id": "2",
+    "title": "Modern Studio in Abuja",
+    "description": "Perfect for business travelers.",
+    "imageUrl": "https://via.placeholder.com/600x400",
+    "pricePerNight": 80.0,
+    "location": "Abuja, Nigeria",
+    "rating": 4.0,
+    "availableDates": ["2025-07-23", "2025-07-24", "2025-07-25"]
+  }
+]
