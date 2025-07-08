@@ -1,24 +1,28 @@
-class PropertyModel {
-  final String id;
-  final String title;
-  final String description;
-  final String imageUrl;
-  final double pricePerNight;
-  final String location;
-  final double rating;
-  final List<String> availableDates;
+import '../../domain/entities/property.dart';
 
-
+class PropertyModel extends Property{
+  
   PropertyModel({
-    required this.id,
-    required this.title,
-    required this.description,
-    required this.imageUrl,
-    required this.pricePerNight,
-    required this.location,
-    required this.rating,
-    required this.availableDates,
-  });
+    required String id,
+    required String title,
+    required String description,
+    required String imageUrl,
+    required double pricePerNight,
+    required String location,
+    required double rating,
+    required List<String> availableDates,
+  }): super(
+
+    id: id,
+    title: title,
+    imageUrl: imageUrl,
+    location: location,
+    pricePerNight: pricePerNight,
+    rating: rating,
+    description: description,
+    availableDates: availableDates,  
+     
+  );
 
   factory PropertyModel.fromJson(Map<String, dynamic> json) {
     return PropertyModel(

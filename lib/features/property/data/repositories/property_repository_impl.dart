@@ -8,9 +8,12 @@ class PropertyRepositoryImpl implements PropertyRepository {
   PropertyRepositoryImpl({required this.localDataSource});
 
   @override
-  Future<List<Property>> getProperties() async {
-    final models = await localDataSource.getProperties();
-    // You can return models directly if Entity == Model
-    return models;
+  Future<List<Property>> getAllProperties() {
+    return localDataSource,getAllProperties();
+  }
+
+  @override
+  Future<Property> getPropertyById(String id) {
+    return localDataSource.getPropertyById(id);
   }
 }
