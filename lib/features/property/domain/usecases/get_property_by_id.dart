@@ -7,6 +7,6 @@ class GetPropertyById {
   GetPropertyById(this.repository);
 
   Future<Property> call(String id) async {
-    return await repository.getPropetyById(id);
+    return await repository.getPropertyById(id);
   }
 }

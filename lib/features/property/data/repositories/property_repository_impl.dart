@@ -1,5 +1,5 @@
-import '../../domain/entities/property.dart';
-import '../../domain/repositories/property_repository.dart';
+import 'package:property_explorer/features/property/domain/entities/property.dart';
+import 'package:property_explorer/features/property/domain/repositories/property_repository.dart';
 import '../datasources/property_local_data_source.dart';
 
 class PropertyRepositoryImpl implements PropertyRepository {
@@ -9,11 +9,12 @@ class PropertyRepositoryImpl implements PropertyRepository {
 
   @override
   Future<List<Property>> getAllProperties() {
-    return localDataSource,getAllProperties();
+    return localDataSource.getAllProperties();
   }
 
   @override
-  Future<Property> getPropertyById(String id) {
-    return localDataSource.getPropertyById(id);
+  Future<Property> getPropertyById(String id) async {
+    final properties = await localDataSource.getAllProperties();
+    return properties.firstWhere((property) => property.id == id);
   }
 }

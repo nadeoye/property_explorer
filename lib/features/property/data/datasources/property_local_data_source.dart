@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import '../models/property_model.dart'
+import '../models/property_model.dart';
 
 abstract class PropertyLocalDataSource {
   Future<List<PropertyModel>> getAllProperties();
@@ -23,6 +23,6 @@ class PropertyLocalDataSourceImpl implements PropertyLocalDataSource{
   @override
   Future<PropertyModel> getPropertyById(String id) async{
     final allProperties = await getAllProperties();
-    return allProperties.firstWhere((Property) => property.id == id);
+    return allProperties.firstWhere((property) => property.id == id);
   }
 }
